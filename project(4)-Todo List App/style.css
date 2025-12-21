@@ -1,0 +1,17 @@
+body {
+    background-image: url(images/image\ for\ home\ back.jpg);
+    text-align: center;
+    margin-top: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0px;
+}
+.hidden {
+    display: none;
+}
+#header {
+    background-color:white;
+    padding: 10px;
+}
