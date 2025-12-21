@@ -1,33 +1,39 @@
-# Todo List Web App (with Login System)
+# Todo List Web App
 
-A simple **Todo List Web Application** built using **HTML, CSS, and JavaScript**.  
-This project helps users create, edit, complete, and delete tasks — with personal accounts and local data storage.
+A simple **Todo List Web Application** built with **HTML, CSS, and JavaScript**.  
+Users can **sign up, log in, and manage their personal todo list** directly in the browser.  
+Each user's data is saved separately using **localStorage**.
 
 ---
 
-## Features
+##  Features
 
-### User Authentication
-- Users can **sign up (signin.html)** and **log in (login.html)**.
-- Each user’s information is stored in **LocalStorage** (no backend required).
-- Only logged-in users can access the todo list page (**index.html**).
-
-### Todo Management
-- Add new tasks easily.
-- Edit or delete existing todos.
-- Mark todos as **Completed/Undo**.
-- View total and completed task count.
+- User **Sign Up** and **Login** system.
+- Add, edit, complete, or delete tasks.
+- View total and completed tasks.
 - Clear all todos at once.
-
-### User-Specific Data
-- Each user has their **own unique todo list** saved in the browser.
-- Todos are saved under a key format like `todos_username`, so users never share data.
-
-### Persistent Storage
-- All data is saved in the browser using **localStorage**.
-- Tasks remain even after refreshing or closing the page (until cleared).
+- Each user has their own **unique todo list**.
 
 ---
 
-## File Structure
+## How to Run
+
+1. Open the folder in **VS Code** (or any editor).  
+2. Open **login.html** in the browser (or with Live Server).  
+3. Sign up if you are a new user, then log in.  
+4. Start managing your todos!
+
+---
+
+## Technologies Used
+
+- **HTML** — page structure  
+- **CSS3** — styling  
+- **JavaScript ** — functionality and localStorage  
+
+---
+
+## Author
+
+**Yabsira Abebe**  
 
