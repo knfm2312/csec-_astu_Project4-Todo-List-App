@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form id ="signinForm">
+        <h2>Signin</h2>
+        <input type="text" placeholder="Name" id="name" />
+        <input type="text" placeholder="username" id="username"/> 
+        <input type="password" placeholder="Password" id="password" />
+        <input type="password" placeholder="Confirm Password" id="confirmPassword" />
+        <button type="submit"> Signin</button>
+        <a href="login.html">Go to login</a>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if(localStorage.getItem('loggedIn')) {
+        window.location.href = 'index.html';
+    }
+            document.getElementById('signinForm').addEventListener("submit", function (event){
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+                if (password !== confirmPassword){
+                    alert("passward is not mach");
+                    return;
+                }
+
+                const user = {
+                    name:name,
+                    username:username,
+                    password:password,
+                };
+                localStorage.setItem(username, JSON.stringify(user));
+                alert("You signed in successfully")
+            });
+        });
+    </script>
+</body>
+</html>

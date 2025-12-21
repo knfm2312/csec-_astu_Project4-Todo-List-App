@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="username"/>
+        <input type="password" id="password" placeholder="password"/>
+        <button type="submit">Login</button>
+        <a href="signin.html">Go to signin</a>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded" , function(){
+            if(localStorage.getItem('loggedIn')) {
+                window.location.href = 'index.html';
+            }
+
+            document.getElementById("loginForm").addEventListener("submit", function(event){
+                event.preventDefault();
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                const user = localStorage.getItem(username);
+
+                if(user){
+                    const parsedUser = JSON.parse(user);
+                    if(parsedUser.password === password){
+                        localStorage.setItem('user', JSON.stringify(parsedUser));
+                        localStorage.setItem('loggedIn', true);
+                        window.location.href="index.html";
+                    }else{
+                        alert("Incorrect password");
+                    }
+                }else{
+                    alert("User not found");
+                }
+
+            });
+         })
+    </script>
+    
+</body>
+</html>
