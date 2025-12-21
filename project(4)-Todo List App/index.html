@@ -10,11 +10,27 @@
     </style>
 </head>
 <body>
+
+    
+
+
+    <div id="main">
+        <h1>Todo List App</h1>
     <div id="header">
-        <h1 id="welcomeMessage">Hello</h1>
+        <p id="welcomeMessage">Hello</p>
         <button id="logoutButton" class="hidden">Logout</button>
     </div>
-    </div>
+        <div class="input-area">
+            <input type="text" id="todo-input" placeholder="Enter a new task..." />
+            <button id="add-btn">Add Todo</button>
+        </div>
+        <ul id="todo-list"></ul>
+        <div class="stats">
+            <p>Total Todos: <span id="total">0</span></p>
+            <p>Completed Todos: <span id="completed">0</span></p>
+        </div>
+        <button id="clear-btn">Clear All</button>
+  </div>
     <script src="script.js"></script>
 </body>
 </html>

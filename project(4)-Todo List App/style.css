@@ -1,17 +1,121 @@
 body {
-    background-image: url(images/image\ for\ home\ back.jpg);
-    text-align: center;
-    margin-top: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/image for home back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  margin: 0; 
+  font-family: Arial, sans-serif;
 }
+
 .hidden {
-    display: none;
+  display: none;
 }
+
 #header {
-    background-color:white;
-    padding: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#welcomeMessage {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#logoutButton {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#logoutButton:hover {
+  background-color: #ff1a1a;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+#add-btn, #clear-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#add-btn:hover, #clear-btn:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.stats {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.empty {
+  color: #ccc;
+  margin-top: 15px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
