@@ -120,3 +120,9 @@ button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+#add-btn:disabled {
+    background-color: lightgray; 
+    color: #888; 
+    cursor: not-allowed;
+    opacity: 0.6; 
+}
