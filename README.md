@@ -1,39 +1,112 @@
-# Todo List Web App
+Here is the entire content for your README.md file on a single page.
 
-A simple **Todo List Web Application** built with **HTML, CSS, and JavaScript**.  
-Users can **sign up, log in, and manage their personal todo list** directly in the browser.  
-Each user's data is saved separately using **localStorage**.
+Instructions: Copy the text inside the box below, go to your GitHub repository, create a new file named README.md, and paste this in.
 
----
+Markdown
+# 🤖 AI-Smart-Site: RAG-Powered Assistant
 
-##  Features
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-3.0+-green.svg)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-brightgreen.svg)
+![Gemini](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-orange.svg)
 
-- User **Sign Up** and **Login** system.
-- Add, edit, complete, or delete tasks.
-- View total and completed tasks.
-- Clear all todos at once.
-- Each user has their own **unique todo list**.
+A modern Landing Page integrated with a **Retrieval-Augmented Generation (RAG)** chatbot. This application allows users to interact with an AI that provides context-aware responses based on documents uploaded via an Admin Portal.
 
 ---
 
-## How to Run
+## ✨ Key Features
 
-1. Open the folder in **VS Code** (or any editor).  
-2. Open **login.html** in the browser (or with Live Server).  
-3. Sign up if you are a new user, then log in.  
-4. Start managing your todos!
-
----
-
-## Technologies Used
-
-- **HTML** — page structure  
-- **CSS3** — styling  
-- **JavaScript ** — functionality and localStorage  
+* **🧠 Context-Aware AI:** Powered by Google's `gemini-2.0-flash` for high-speed, intelligent responses.
+* **📄 Dynamic Knowledge Base:** Admins can upload PDFs which are automatically processed, chunked, and stored in a vector database.
+* **🔐 Secure Authentication:** Full user lifecycle management including local signup/login and **Google OAuth** integration.
+* **💬 Real-time Chat Widget:** A sleek, floating UI with typing indicators and persistent message history.
+* **📱 Responsive Design:** Fully optimized for desktop and mobile devices.
 
 ---
 
-## Author
+## 🛠️ Tech Stack
 
-**Yabsira Abebe**  
+| Category | Technology |
+| :--- | :--- |
+| **Backend** | Flask (Python 3.9+) |
+| **LLM** | Google Gemini 2.0 Flash |
+| **Database** | MongoDB Atlas (Vector Search) |
+| **Frontend** | Jinja2, Vanilla JS, CSS3 |
+| **Auth** | Flask-Login & Google OAuth 2.0 |
 
+---
+
+## 🚀 Getting Started
+
+### 1. Installation
+Clone the repository and install the required dependencies:
+
+```bash
+git clone [https://github.com/yourusername/ai-smart-site.git](https://github.com/yourusername/ai-smart-site.git)
+cd ai-smart-site
+pip install -r requirements.txt
+2. Environment Setup (.env)
+Create a file named .env in the root directory and add your credentials:
+
+Code snippet
+SECRET_KEY=your_flask_secret_key
+
+# MongoDB Connection
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/ai_website
+
+# Google Gemini API
+GEMINI_API_KEY=your_gemini_api_key
+
+# Google OAuth (For Social Login)
+GOOGLE_CLIENT_ID=your_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_client_secret
+3. Configure MongoDB Vector Search
+To enable the "brain" of the chatbot, use the JSON Editor in MongoDB Atlas and paste this configuration:
+
+JSON
+{
+  "fields": [
+    {
+      "numDimensions": 768,
+      "path": "embedding",
+      "similarity": "cosine",
+      "type": "vector"
+    }
+  ]
+}
+📂 File Structure
+Plaintext
+.
+├── app.py              # Main Flask server and RAG logic
+├── requirements.txt    # Project dependencies
+├── .env                # API keys and secrets (Keep private!)
+├── static/             # Static assets
+│   ├── css/
+│   │   └── style.css   # Styles for Chat UI and Landing Page
+│   └── js/
+│       └── chat.js     # Frontend logic for AI interaction
+└── templates/          # HTML Templates
+    ├── index.html      # Landing Page
+    ├── admin.html      # Document Upload Portal
+    ├── login.html      # User Sign-in
+    └── signup.html     # User Registration
+🛡️ Admin Setup
+To access the Knowledge Base Management portal (/admin):
+
+Register a new account via the Signup page.
+
+Open your MongoDB collection users.
+
+Locate your user document and manually update the field "is_admin": false to "is_admin": true.
+
+Refresh the website, and the Admin Portal link will appear in the navigation bar.
+
+📝 License
+Distributed under the MIT License. See LICENSE for more information.
+
+Developed for the Dev Club 2026 Recruitment Process.
+
+
+***
+
+Would you like me to help you write a **`.gitignore`** file now to make sure your private keys stay hidden?
