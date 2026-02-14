@@ -108,3 +108,5 @@ If you want the "others" part to look organized, a table is the best way to do i
 | **Database** | MongoDB Atlas (Vector Search) |
 | **Frontend** | Jinja2, Vanilla JS, CSS3 |
 | **Auth** | Flask-Login & Google OAuth 2.0 |
+
+---
