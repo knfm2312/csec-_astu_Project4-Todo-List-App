@@ -38,7 +38,7 @@ Admins can upload PDFs to build a dynamic knowledge base, while users interact w
 |-----------|-------------|
 | **Backend** | Flask (Python 3.9+) |
 | **Database** | MongoDB Atlas (Vector Search) |
-| **AI/LLM** | Google Gemini 2.0 Flash |
+| **AI/LLM** | Google Gemini 2.5 Flash |
 | **Embeddings** | text-embedding-004 |
 | **Frontend** | Jinja2, Vanilla JS, CSS3 |
 | **Auth** | Flask-Login & Google OAuth 2.0 |
@@ -66,7 +66,7 @@ In MongoDB Atlas, create a vector index with this configuration:
 {
   "fields": [
     {
-      "numDimensions": 768,
+      "numDimensions": 3072,
       "path": "embedding",
       "similarity": "cosine",
       "type": "vector"
