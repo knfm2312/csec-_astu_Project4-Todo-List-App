@@ -95,10 +95,8 @@ Use the **JSON Editor** in MongoDB Atlas and paste this configuration:
     └── signup.html     # User Registration
 ---
 
-### 3. The Tech Stack Table
-If you want the "others" part to look organized, a table is the best way to do it:
+---
 
-```markdown
 ## 🛠️ Tech Stack
 
 | Category | Technology |
